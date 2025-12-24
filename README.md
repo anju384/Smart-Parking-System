@@ -1,37 +1,66 @@
-# Smart Parking Management System
+# 🚗 Smart Parking Management System
 
-A Python-based smart parking management system prototype using QR-based slot selection and real-time visualization.
+This project is a software-based indoor smart parking system that allows users
+to view available parking slots, reserve a slot using a QR-based interface, and
+simulate automated entry and exit validation.
 
-## Overview
-This project was developed as a college project to demonstrate how software-based automation can be applied to indoor parking management systems.  
-It focuses on digital slot management, QR-based entry/exit flow, and real-time status updates.
+The project was developed as part of a college course to demonstrate how
+real-world parking systems can be modeled using software instead of expensive
+hardware.
 
-## Features
-- QR-based parking slot selection
-- Real-time visualization of available and occupied slots
-- Entry and exit simulation using unique verification codes
-- User and admin interaction through a web interface
+---
 
-## Tech Stack
+## 📌 Project Overview
+
+Traditional parking systems rely on manual processes and lack real-time
+visibility of parking availability. This leads to delays, congestion, and poor
+user experience.
+
+This project addresses these issues by providing:
+- A real-time digital parking layout
+- QR-based slot reservation and exit verification
+- A centralized backend to track users and slots
+- A system that is scalable toward AI-based vehicle detection in the future
+
+---
+
+## 🛠️ Technologies Used
+
 - Python
-- Flask
-- QR Code Library
-- HTML, CSS
-- OpenCV (conceptual)
+- Flask (backend web server)
+- OpenCV (planned for object detection extension)
+- QRCode library
+- HTML, CSS, JavaScript (frontend)
+- SQLite / MySQL (database)
 
-## System Design
-The system follows a simple client-server model:
-- Users register and select parking slots via a web interface
-- Each booking generates a unique QR code
-- Slot status updates dynamically during entry and exit
+---
 
-## Note
-This project is a **software-based simulation** created for academic purposes.  
-Object detection and hardware-based verification are kept **conceptual** and can be integrated in future versions.
+## ⚙️ How the system works
 
-## Future Improvements
-- Integration of real-time object detection
-- Hardware sensors for slot occupancy
-- Database optimization and analytics
-# Smart-Parking-System
-A Python-based smart parking management system prototype using QR-based slot selection and real-time visualization.
+1. User scans an entry QR code and opens the parking interface on their phone  
+2. User registers and selects an available parking slot  
+3. The system generates a unique exit QR / exit code  
+4. Slot status is updated in real-time (Vacant → Occupied)  
+5. At exit, the user enters the exit code to free the slot  
+
+The admin interface and user interface stay synchronized through the backend.
+
+---
+
+## 📂 Main Features
+
+- QR-based slot selection using a mobile interface  
+- Real-time parking slot visualization  
+- Unique exit QR generation for validation  
+- Centralized backend for slot and user tracking  
+- Modular design for future integration with object detection (YOLO / OpenCV)
+
+---
+
+
+
+## 🚀 How to Run (Basic)
+
+```bash
+pip install -r requirements.txt
+python app.py
