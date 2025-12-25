@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Parking</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>Parking Slots</h1>
+<div class="grid">
+  {% for slot in slots %}
+    <div class="slot {{ slot[1]|lower }}">{{ slot[0] }}</div>
+  {% endfor %}
+</div>
+<a href="/register">Register Vehicle</a>
+</body>
+</html>

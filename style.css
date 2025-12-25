@@ -1,0 +1,20 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.slot {
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.vacant { background: green; }
+.occupied { background: red; }

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Exit Verification</h2>
+<p>Your Exit Code: <b>{{ exit_code }}</b></p>
+<img src="/static/{{ exit_code }}.png"><br><br>
+<form action="/exit" method="post">
+  Enter Exit Code: <input name="exit_code">
+  <button type="submit">Exit</button>
+</form>
+</body>
+</html>
